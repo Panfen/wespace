@@ -1,6 +1,6 @@
 //index.js
 //获取应用实例
-var app = getApp()
+var app = getApp();
 Page({
   data: {
     motto: '共享创造价值',
@@ -9,8 +9,9 @@ Page({
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
-      url: '../logs/logs'
+      url: '../item/item?name=Panfen'
     })
+    //或者直接在wxml页面使用<navigator url=""></navigator>控件
   },
   onLoad: function () {
     console.log('onLoad')
@@ -20,7 +21,7 @@ Page({
       //更新数据
       that.setData({
         userInfo:userInfo
-      })
-    })
+      });
+    });
   }
-})
+});

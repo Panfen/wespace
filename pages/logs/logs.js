@@ -1,10 +1,9 @@
 //logs.js
-var util = require('../../utils/util.js')
+var util = require('../../utils/util.js');
+var app = getApp();
 Page({
   data: {
-    default: "点我呀",
-    hello:"say hello",
-    news:['aaa','bbb','ccc']
+    nu:'',
   },
   onLoad: function () {
     this.setData({
@@ -13,9 +12,18 @@ Page({
       })
     })
   },
-  defaultButton:function(){
+  numInput:function(e){
     this.setData({
-      hello:'toooooo'
+      nu:e.detail.value
     });
-  }
+  },
+  searchTap:function(){
+    //550532965009
+    var nu = this.data.nu 
+    app.getExpressCom(nu,function(data){
+      app.getExpressInfo(nu,data,function(detail){
+        console.log(detail);
+      });
+    });
+  },
 })

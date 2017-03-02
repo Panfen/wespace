@@ -1,13 +1,6 @@
 <!--logs.wxml-->
 
-<include src="../templates/header.wxml"/>
-
-<button type="default" bindtap="defaultButton" > {{default}} </button>
-<button type="primary" bindtap="primary"> primary </button>
-<text>{{ hello }}</text>
-<view wx:for="{{news}}"  wx:for-index="id" wx:for-item="new">
-  {{id}}:{{new}}
+<view class="container">
+  <input placeholder="请输入运单号" class="num" bindinput="numInput" auto-focus/>
+  <button type="primary" bindtap="searchTap">查询</button>
 </view>
-
-<import src="../templates/footer.wxml"/>
-<template is="footer2" data="{{text:'hello'}}"/>

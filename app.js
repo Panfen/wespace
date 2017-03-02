@@ -26,5 +26,31 @@ App({
   },
   globalData:{
     userInfo:null
+  },
+  //由快递单号查询快递公司名称  
+  getExpressCom:function(nu,callback){
+    wx.request({
+      url: 'https://ali-deliver.showapi.com/fetchCom?nu='+nu,
+      header: {
+          "Content-Type":"application/json",
+          "Authorization":"APPCODE 17921ae4c1c146feac8f16240a47c25a"
+      },
+      success: function(res) {
+        callback(res.data.showapi_res_body.data[1])
+      }
+    });
+  },
+  //由快递单号和快递公司名称查询物流信息  
+  getExpressInfo:function(nu,com,callback){
+    wx.request({
+      url: 'https://ali-deliver.showapi.com/showapi_expInfo?com='+com+'&nu='+nu,
+      header: {
+          "Content-Type":"application/json",
+          "Authorization":"APPCODE 17921ae4c1c146feac8f16240a47c25a"
+      },
+      success: function(res) {
+        callback(res.data.showapi_res_body)
+      }
+    });
   }
 })

@@ -6,3 +6,17 @@
 .log-item {
   margin: 10rpx;
 }
+input.num{
+  border:1px solid #ccc;
+  width:80%;
+  padding:2px 6px;
+  border-radius: 2px;
+  font-size:12px;
+}
+button{
+  width:80%;
+  padding:2px 6px;
+  border-radius: 2px;
+  font-size:12px;
+  margin-top:20px;
+}

@@ -1,12 +1,27 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/item/item"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeSpace",
     "navigationBarTextStyle":"gray"
+  },
+  "tabBar": {
+    "borderStyle":"white",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "主页",
+      "iconPath": "./images/icon1.png",
+      "selectedIconPath": "./images/icon1s.png"
+    },{
+      "pagePath": "pages/logs/logs",
+      "text": "设置",
+      "iconPath": "./images/icon2.png",
+      "selectedIconPath": "./images/icon2s.png"
+    }]
   }
 }
