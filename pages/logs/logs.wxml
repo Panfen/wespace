@@ -1,6 +1,13 @@
 <!--logs.wxml-->
-<view class="container log-list">
-  <block wx:for="{{logs}}" wx:for-item="log" wx:key="*this">
-    <text class="log-item">{{index + 1}}. {{log}}</text>
-  </block>
+
+<include src="../templates/header.wxml"/>
+
+<button type="default" bindtap="defaultButton" > {{default}} </button>
+<button type="primary" bindtap="primary"> primary </button>
+<text>{{ hello }}</text>
+<view wx:for="{{news}}"  wx:for-index="id" wx:for-item="new">
+  {{id}}:{{new}}
 </view>
+
+<import src="../templates/footer.wxml"/>
+<template is="footer2" data="{{text:'hello'}}"/>
