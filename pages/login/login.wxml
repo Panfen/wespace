@@ -1,0 +1,22 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+  <view class="logo">
+    <image src="../../images/logo2.png" mode="aspectFit"></image>
+  </view>
+  <view class="loginbox">
+    <view class="usernamebox">
+      <text>用户名</text>
+      <input palceholder="输入用户名" bindinput="usernameInput"/>
+    </view>
+    <view class="passwordbox">
+      <text>密码</text>
+      <input palceholder="输入密码" type="password" bindinput="passwordInput"/>
+      <navigator url="#" hover-class="navigator-hover">忘记密码</navigator>
+    </view>
+  </view>
+  <button type="primary" bindtap="loginTap" class="login-btn"> 登录 </button>
+  <view class="registerbox">
+    <text>没有账户？注册</text>
+    <navigator url="#" hover-class="navigator-hover"></navigator>
+  </view>
+</view>

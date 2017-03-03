@@ -14,7 +14,6 @@ Page({
     //或者直接在wxml页面使用<navigator url=""></navigator>控件
   },
   onLoad: function () {
-    console.log('onLoad')
     var that = this
     //调用应用实例的方法获取全局数据
     app.getUserInfo(function(userInfo){

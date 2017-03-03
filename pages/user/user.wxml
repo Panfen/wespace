@@ -1,0 +1,7 @@
+{{username}}
+<slider />
+<switch/>
+
+<button type="default" bindtap="showBox">点我</button>
+
+<modal title="标题" comfirm-text="确定" cancel-text="取消" hidden="{{showConfirmBox}}" bindconfirm="confirmBox" bindcancel="cancelBox"></modal>

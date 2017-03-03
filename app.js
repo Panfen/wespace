@@ -27,6 +27,9 @@ App({
   globalData:{
     userInfo:null
   },
+  appData:{
+    userInfo:null
+  },
   //由快递单号查询快递公司名称  
   getExpressCom:function(nu,callback){
     wx.request({

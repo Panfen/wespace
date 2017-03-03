@@ -1,0 +1,67 @@
+/* pages/login/login.wxss */
+view.logo{
+    width:216px;
+    height: 60px;
+    margin:0px auto;
+}
+view.logo image{
+    width:216px;
+    height: 60px;
+}
+
+view.loginbox{
+    width: 216px;
+    margin:20px 0px 40px 0px;
+}
+view.loginbox text{
+    color: #999;
+    font-size: 12px;
+    display: inline-block;
+    margin-bottom: 4px;
+}
+view.loginbox input{
+    font-family: "微软雅黑";
+    font-size:14px;
+    border-bottom: 1px solid #999;
+}
+view.loginbox input:active{
+    border-bottom: 1px solid #666;
+}
+view.loginbox .passwordbox{
+    margin-top: 12px;
+    position: relative
+}
+view.loginbox .passwordbox navigator{
+    right:2px;
+    bottom: 0px;
+    padding:4px 0px 6px 6px;
+    position: absolute;
+    font-size:12px;
+    color:#999;
+    display: inline-block;
+    z-index: 10;
+}
+view.loginbox .passwordbox navigator:hover{
+    color:#666;
+}
+button.login-btn{
+    width:216px;
+    line-height: 2;
+    margin:2px auto;
+}
+
+.registerbox{
+    margin-top:20px;
+}
+.registerbox text{
+    font-size: 14px;
+}
+.registerbox navigator{
+    width:40px;
+    height:40px;
+    margin:10px auto;
+    border-radius: 30px;
+    border:2px solid #3CC51F;
+    background: url('../../images/wechat.png') no-repeat 8px 8px;
+    background-size:60%;
+}

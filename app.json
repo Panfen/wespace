@@ -1,8 +1,10 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs",
-    "pages/item/item"
+    "pages/express/express",
+    "pages/item/item",
+    "pages/user/user",
+    "pages/login/login"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -18,8 +20,8 @@
       "iconPath": "./images/icon1.png",
       "selectedIconPath": "./images/icon1s.png"
     },{
-      "pagePath": "pages/logs/logs",
-      "text": "设置",
+      "pagePath": "pages/user/user",
+      "text": "用户",
       "iconPath": "./images/icon2.png",
       "selectedIconPath": "./images/icon2s.png"
     }]
