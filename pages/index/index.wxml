@@ -1,10 +1,46 @@
 <!--index.wxml-->
 <view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+
+  <!--swiper-->
+  <swiper indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+    <block wx:for="{{imgUrls}}" wx:key="unique">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="355" height="150"/>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!--精品办公-->
+  <view class="content-box">
+    <view class="header">
+      <text>精品办公</text>
+      <text class="all">全部精品</text>
+    </view>
+    <view class="body office">
+      <view class="body-item" wx:for="{{officeItems}}" wx:for-item="officeItem" wx:key="unique">
+        <image src="{{officeItem.pic}}" mode="scaleToFill"></image>
+        <text>{{officeItem.text}}</text>
+      </view>
+    </view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+
+  <!--会议场所-->
+  <view class="content-box">
+    <view class="header">
+      <text>会议场所</text>
+      <text class="all">全部场所</text>
+    </view>
+    <view class="body" >
+      <view class="body-item single"  wx:for="{{meetingItems}}" wx:for-item="meetingItem" wx:key="unique">
+        <image src="{{meetingItem.pic}}" mode="scaleToFill"></image>
+        <text class="title">{{meetingItem.title}}</text>
+        <text class="rank">星级：<em>{{meetingItem.rank}}</em></text>
+        <text class="location">地址：{{meetingItem.location}}</text>
+        <text class="price">{{meetingItem.price}}</text>
+      </view>
+    </view>
   </view>
+
+  <!--优雅良品-->
+  <view class="content-box"></view>
 </view>

@@ -5,9 +5,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 200rpx 0;
   box-sizing: border-box;
 } 
 text{
+  font-size:14px;
   font-family: "微软雅黑";
+}
+.fn-clear{
+  clear:both;
+}
+.fn-left{
+  float: left;
+  display: inline-block;
 }
