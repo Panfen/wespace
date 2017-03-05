@@ -35,11 +35,11 @@ App({
     wx.request({
       url: 'https://ali-deliver.showapi.com/fetchCom?nu='+nu,
       header: {
-          "Content-Type":"application/json",
-          "Authorization":"APPCODE 17921ae4c1c146feac8f16240a47c25a"
+        "Content-Type":"application/json",
+        "Authorization":"APPCODE 17921ae4c1c146feac8f16240a47c25a"
       },
       success: function(res) {
-        callback(res.data.showapi_res_body.data[1])
+        callback(res.data.showapi_res_body.data[1]);
       }
     });
   },
@@ -48,11 +48,11 @@ App({
     wx.request({
       url: 'https://ali-deliver.showapi.com/showapi_expInfo?com='+com+'&nu='+nu,
       header: {
-          "Content-Type":"application/json",
-          "Authorization":"APPCODE 17921ae4c1c146feac8f16240a47c25a"
+        "Content-Type":"application/json",
+        "Authorization":"APPCODE 17921ae4c1c146feac8f16240a47c25a"
       },
       success: function(res) {
-        callback(res.data.showapi_res_body)
+        callback(res.data.showapi_res_body);
       }
     });
   }

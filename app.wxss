@@ -9,12 +9,6 @@
 } 
 text{
   font-size:14px;
-  font-family: "微软雅黑";
+  font-family:'微软雅黑','Times New Roman';
 }
-.fn-clear{
-  clear:both;
-}
-.fn-left{
-  float: left;
-  display: inline-block;
-}
+

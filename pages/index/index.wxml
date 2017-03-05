@@ -18,7 +18,9 @@
     </view>
     <view class="body office">
       <view class="body-item" wx:for="{{officeItems}}" wx:for-item="officeItem" wx:key="unique">
-        <image src="{{officeItem.pic}}" mode="scaleToFill"></image>
+        <navigator url="../officeItem/officeItem">
+          <image src="{{officeItem.pic}}" mode="scaleToFill"></image>
+        </navigator>
         <text>{{officeItem.text}}</text>
       </view>
     </view>
@@ -32,15 +34,52 @@
     </view>
     <view class="body" >
       <view class="body-item single"  wx:for="{{meetingItems}}" wx:for-item="meetingItem" wx:key="unique">
-        <image src="{{meetingItem.pic}}" mode="scaleToFill"></image>
-        <text class="title">{{meetingItem.title}}</text>
-        <text class="rank">星级：<em>{{meetingItem.rank}}</em></text>
-        <text class="location">地址：{{meetingItem.location}}</text>
-        <text class="price">{{meetingItem.price}}</text>
+        <navigator url="../meetingItem/meetingItem">
+          <image src="{{meetingItem.pic}}" mode="scaleToFill"></image>
+        </navigator>
+        <view class="title">
+          <view class="left">
+            <text>{{meetingItem.title}} </text>
+            <text class="rank">{{meetingItem.rank}}分</text>
+          </view>
+          <view class="distance">
+            <text>{{meetingItem.distance}}</text>
+          </view>
+        </view>
+        <view class="location"><text>地址：{{meetingItem.location}}</text></view>
+        <view class="price">
+          <text class="price">{{meetingItem.price}}</text>
+          <text class="tag" wx:for="{{meetingItem.tags}}" wx:for-item="tag" wx:key="unique">{{tag}}</text>
+        </view>
       </view>
     </view>
   </view>
 
-  <!--优雅良品-->
-  <view class="content-box"></view>
+  <!--运动场所-->
+  <view class="content-box">
+    <view class="header">
+      <text>运动场所</text>
+      <text class="all">全部场所</text>
+    </view>
+    <view class="body" >
+      <view class="body-item single"  wx:for="{{sportsItems}}" wx:for-item="sportsItem" wx:key="unique">
+        <navigator url="../sportsItem/sportsItem">
+          <image src="{{sportsItem.pic}}" mode="scaleToFill"></image>
+        </navigator>
+        <view class="title">
+          <view class="left">
+            <text>{{sportsItem.title}} </text>
+            <text class="rank">{{sportsItem.rank}}分</text>
+          </view> 
+          <view class="distance"><text>{{sportsItem.distance}}</text></view>
+        </view>
+        <view class="location"><text>地址：{{sportsItem.location}}</text></view>
+        <view class="price">
+          <text class="price">{{sportsItem.price}}</text>
+          <!--<text class="tag" wx:for="{{sportsItem.tags}}" wx:for-item="tag" wx:key="unique">{{tag}}</text>-->
+        </view>
+      </view>
+    </view>
+  </view>
+
 </view>

@@ -2,15 +2,17 @@
   "pages":[
     "pages/index/index",
     "pages/express/express",
-    "pages/item/item",
+    "pages/officeItem/officeItem",
+    "pages/meetingItem/meetingItem",
+    "pages/sportsItem/sportsItem",
     "pages/user/user",
     "pages/login/login"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#06BD04",
     "navigationBarTitleText": "WeSpace",
-    "navigationBarTextStyle":"gray"
+    "navigationBarTextStyle":"#fff"
   },
   "tabBar": {
     "borderStyle":"white",

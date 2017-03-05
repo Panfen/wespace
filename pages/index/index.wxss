@@ -38,17 +38,40 @@ text.all{
 .body-item.single image{
   height: 400rpx;
 }
-.body-item.single text{
-  display: block;
+.body-item.single view.title{
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.body-item.single text.title{
-  font-weight: bold;
+.body-item.single view.title view{
+  display: inline-block;
 }
-.body-item.single text.rank em{
+.body-item.single view.title text.rank{
   color:darkorange;
 }
-.body-item.single text.price{
+.body-item.single view.title .distance text{
+  color:#666;
+  font-size:12px;
+}
+.body-item.single view.location{
+  color:#999;
+  font-size:12px;
+  font-weight:lighter;
+}
+.body-item.single view.price text{
   color:#3DB85D;
+}
+.body-item.single view.price .tag{
+  border:1px solid darkorange;
+  border-radius: 2px;
+  margin:0 2px;
+  color: darkorange;
+  font-size: 10px;
+  padding:0px 3px;
+}
+.body-item.single view.price text.price{
+  margin-right:4px;
 }
 .office .body-item{
   width: 45%;
@@ -60,7 +83,7 @@ text.all{
 }
 .body-item image{
   width:100%;
-  height:100%;
+  height:85px;
 }
 .office .body-item text{
   left:0px;
