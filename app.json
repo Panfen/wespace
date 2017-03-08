@@ -5,8 +5,8 @@
     "pages/officeItem/officeItem",
     "pages/meetingItem/meetingItem",
     "pages/sportsItem/sportsItem",
-    "pages/user/user",
-    "pages/login/login"
+    "pages/login/login",
+    "pages/user/user"
   ],
   "window":{
     "backgroundTextStyle":"light",

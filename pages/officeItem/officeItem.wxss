@@ -1,1 +1,4 @@
 /* pages/item/item.wxss */
+page{
+    background: #ccc;
+}

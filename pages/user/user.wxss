@@ -1,1 +1,88 @@
 /* pages/user/user.wxss */
+page{
+  background: #F5F5F5;
+}
+.bg-pic{
+  width:100%;
+  height: 460rpx;
+  background: #ccc;
+  position: relative;
+}
+.bg-pic image{
+  height: 100%;
+}
+.bg-pic image.header{
+  height:220rpx;
+  width: 220rpx;
+  border-radius: 118rpx;
+  border:8rpx solid #fff;
+  position:absolute;
+  bottom: -115rpx;
+  left:50rpx;
+}
+.bg-pic text.share{
+  width:40rpx;
+  height: 40rpx;
+  display: inline-block;
+  position: absolute;
+  top:40rpx;
+  right:60rpx;
+  background: url('../../images/system/iconfont-share.png');
+}
+.category{
+    width:100%;
+}
+.category .category-item{
+    position: relative;
+    padding:22rpx 94rpx;
+    border-top:1rpx solid #ccc;
+    border-bottom: 1rpx solid #ccc;
+    background:#fff;
+}
+.category .category-item text{
+  color:#666;
+}
+.category .category-item.list{
+    margin:130rpx 0 40rpx 0;
+}
+.category .category-item:before{
+    content: "";
+    width:40rpx;
+    height:40rpx;
+    display: inline-block;
+    position: absolute;
+    top:22rpx;
+    left:40rpx;
+    background: url('../../images/system/iconfont-list.png') no-repeat;
+}
+.category .category-item:after{
+    content: "";
+    width:40rpx;
+    height:40rpx;
+    display: inline-block;
+    position: absolute;
+    top:22rpx;
+    right:30rpx;
+    background: url('../../images/system/iconfont-enter.png') no-repeat;
+}
+
+.category .category-item.collect{
+  border-bottom: 1rpx solid #ddd;
+}
+.category .category-item.collect:before{
+  background: url('../../images/system/iconfont-collect.png') no-repeat;
+}
+.category .category-item.remark{
+  border-top: none;
+  border-bottom: 1rpx solid #ddd;
+}
+.category .category-item.remark:before{
+  background: url('../../images/system/iconfont-remark.png') no-repeat;
+}
+.category .category-item.info{
+  border-top: none;
+}
+.category .category-item.info:before{
+  background: url('../../images/system/iconfont-info.png') no-repeat;
+}
+

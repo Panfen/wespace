@@ -1,1 +1,29 @@
-<button type="default" bindtap="uploadFile">上传</button>
+<!--pages/user/user.wxml-->
+<view class="container">
+
+  <view class="bg-pic">
+    <image src="{{bgPic}}" mode="scaleToFill"></image>
+    <image src="{{userInfo.avatarUrl}}" class="header" bindtap="chooseHeader"></image>
+    <text class="share"></text>
+  </view>
+
+  <view class="category">
+    <view class="category-item list">
+      <view><text>租用记录</text></view>
+      <view class="enter"></view>
+    </view>
+
+    <view class="category-item collect">
+      <view><text>我的收藏</text></view>
+      <view class="enter"></view>
+    </view>
+    <view class="category-item remark">
+      <view><text>我的评价</text></view>
+      <view class="enter"></view>
+    </view>
+    <view class="category-item info">
+      <view><text>我的消息</text></view>
+      <view class="enter"></view>
+    </view>
+  </view>
+</view>

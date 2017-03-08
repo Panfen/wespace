@@ -1,7 +1,4 @@
 /**index.wxss**/
-.container{
-  background: #ECEDF1;
-}
 swiper{
   width:100%;
 }
