@@ -1,0 +1,17 @@
+<!--pages/gallery/gallery.wxml-->
+<view class="container">
+    <scroll-view scroll-x="true" bindscroll="scrollPics">
+    <view class="scroll-item">
+        <view class="pic">1</view>
+    </view>
+    <view class="scroll-item">
+        <view class="pic">2</view>
+    </view>
+    <view class="scroll-item">
+        <view class="pic">3</view>
+    </view>
+    <view class="scroll-item">
+        <view class="pic">4</view>
+    </view>
+    </scroll-view>
+</view>

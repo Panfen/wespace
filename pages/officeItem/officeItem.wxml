@@ -1,1 +1,67 @@
-<view>hello</view>
+<view class="container">
+
+  <view class="pic-gallery">
+    <image src="{{coverPic}}" mode="scaleToFill" bindtap="showPics"></image>
+    <view class="btn-box">
+      <text class="share"></text>
+      <text class="collect {{collected}}" bindtap="collectOffice"></text>
+    </view>
+    <view class="office-name">
+      <text class="name">精品办公室</text>
+      <text class="pics">14张</text>
+    </view>
+    
+  </view>
+
+  <view class="location">
+    <view class="map">
+      <map id="map" longitude="113.324520" latitude="23.099994" scale="14"></map>
+      <text>杭州市西湖区留和路路59号</text>
+    </view>
+    <view class="remark">
+      <view class="border"></view>
+      <view class="score">
+        <view class="text">
+          <text>4.5</text>分
+        </view>
+        <text class="remarks">查看{{remarks}}条评论</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="time">
+    <view class="start">
+      <text class="label">开始</text>
+      <view>
+        <text class="time1 date">3月9日</text>
+        <text class="time1">12:00</text>
+      </view>
+    </view>
+    <view class="total">共5小时</view>
+    <view class="end">
+      <text class="label">结束</text>
+      <view>
+        <text class="time1 date">3月9日</text>
+        <text class="time1">17:00</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="order">
+    <view class="header">
+      <text class="title">预定 [{{rentItmes.length}}]</text>
+      <text class="info">预定后5分钟内收到确认通知</text>
+    </view>
+    <view class="item" wx:for="{{rentItmes}}" wx:for-item="rentItme" wx:key="unique">
+      <text class="title">{{rentItme.title}}</text>
+      <text class="special">{{rentItme.special}}</text>
+      <text class="notice">{{rentItme.notice}}</text>
+      <text class="price">{{rentItme.price}}</text>
+      <view class="tags">
+        <text class="tag" wx:for="{{rentItme.tags}}" wx:for-item="tag" wx:key="unique">{{tag}}</text>
+      </view>
+      <button class="order-btn">预定</button>
+    </view>
+  </view>
+
+</view>

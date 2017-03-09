@@ -12,6 +12,6 @@ Page({
     });
   },
   chooseHeader:function(){
-    console.log('hah')
+    //
   }
 })

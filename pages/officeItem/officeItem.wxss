@@ -1,4 +1,213 @@
 /* pages/item/item.wxss */
-page{
-    background: #ccc;
+.pic-gallery{
+    height: 400rpx;
+    position: relative;
+}
+.pic-gallery image{
+    height: 100%;
+}
+.pic-gallery .btn-box{
+    top:40rpx;
+    right:40rpx;
+    position:absolute;
+}
+.pic-gallery .btn-box text{
+    width: 60rpx;
+    height:60rpx;
+    margin-left: 20rpx;
+    border-radius: 30rpx;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.3) url('../../images/system/iconfont-share.png') no-repeat 8rpx 10rpx;
+}
+.pic-gallery .btn-box text.collect{
+    background: rgba(0, 0, 0, 0.3) url('../../images/system/iconfont-collect_2.png') no-repeat 10rpx 9rpx;
+}
+.pic-gallery .btn-box text.collect.collected{
+    background: rgba(0, 0, 0, 0.3) url('../../images/system/iconfont-collect.png') no-repeat 10rpx 9rpx;
+}
+.pic-gallery .office-name{
+    bottom:40rpx;
+    left:0rpx;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.pic-gallery .office-name .name{
+    color:#fff;
+    margin-left:40rpx;
+    font-size:0.8rem;
+}
+.pic-gallery .office-name .pics{
+    color:#fff;
+    font-size:0.65rem;
+    display: inline-block;
+    padding-left:46rpx;
+    margin-right:40rpx;
+    line-height:40rpx;
+    background: url('../../images/system/iconfont-pics.png') no-repeat 0rpx 0rpx;
+}
+.location{
+    width:100%;
+    display: flex;
+    border-bottom: 0.1rpx solid #ddd;
+}
+.location .map{
+    width:70%;
+}
+.location .map map{
+    height: 200rpx;
+    width:100%;
+}
+.location .map text{
+    padding:14rpx 12rpx;
+    font-size:0.7rem;
+    color:#666;
+    display: block;
+    background: #fff;
+}
+.location .remark{
+    width:30%;
+    display: flex;
+}
+.location .remark .border{
+    width:1%;
+    height:100%;
+    background: #ddd;
+}
+.location .remark .score{
+    width:99%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+}
+
+.location .remark .score .text{
+    color: darkorange;
+    font-size:0.8rem;
+    display: inline-block;
+    text-align: center;
+}
+.location .remark .score .text text{
+    font-size:1.2rem;
+}
+.location .remark .score .remarks{
+    color:#999;
+    margin-top:40rpx;
+    font-size:0.65rem;
+    text-align: center;
+}
+.time{
+    background:#fff; 
+    width: 80%;
+    display: flex;
+    padding:10rpx;
+    margin: 30rpx 0 30rpx 0;
+    border: 0.1rpx solid #ddd;
+    border-radius: 8rpx;
+}
+.time .start,.time .end{
+    width:40%;
+}
+.time text{
+    width:100%;
+    display: block;
+    text-align: center;
+}
+.time .label{
+    font-size:0.75rem;
+    color: #999;
+}
+.time view{
+    margin-top:4rpx;
+    text-align: center;
+}
+.time .time1{
+    color:#3DB85D;
+    font-size:0.8rem;
+    display: inline;
+}
+.time .time1.date{
+    margin-right:10rpx;
+}
+.time .total{
+    width:20%;
+    color: #999;
+    text-align: center;
+    font-size: 0.75rem;
+    align-self: center;
+    font-family: "微软雅黑";
+    justify-content: center;
+    padding:4rpx;
+    border-radius: 14rpx;
+    border: 0.1rpx solid #ddd;
+}
+.order{
+    width:100%;
+    background:#fff; 
+    border-top: 0.1rpx solid #ddd;
+    border-bottom: 0.1rpx solid #ddd;
+}
+.order .header{
+    display: flex;
+    padding:20rpx 20rpx 20rpx 60rpx; 
+    position: relative;
+    border-bottom: 0.1rpx solid #ddd;
+    justify-content: space-between;
+}
+.order .header:before{
+    content: "订";
+    top:25rpx;
+    left:15rpx;
+    color:deeppink;
+    font-size:0.65rem;
+    border:0.1rpx solid deeppink;
+    position: absolute;
+}
+.order .header .title{
+    font-size:0.8rem;
+}
+.order .header .info{
+    color:darkorange;
+    font-size: 0.75rem;
+}
+.order .item{
+    padding: 20rpx;
+    position: relative;
+    border-bottom: 0.1rpx solid #ddd;
+}
+.order .item .title{
+    display: inline-block;
+    margin-bottom: 12rpx;
+}
+.order .item .special,.order .item .notice{
+    color:#666;
+    padding:4rpx;
+    font-size:0.75rem;
+    display: block;
+}
+.order .item .price{
+    color:#3DB85D;
+    display: block;
+    padding:6rpx 0 6rpx 0;
+}
+.order .item .tags .tag{
+    border-radius:8rpx;
+    margin:0 4rpx;
+    color:darkorange;
+    font-size:0.6rem;
+    padding:0rpx 6rpx;
+    border:0.1rpx solid darkorange;
+}
+.order .item .order-btn{
+    display: inline-block;
+    top:96rpx;
+    right:20rpx;
+    position: absolute;
+    font-size:0.75rem;
+    color:#fff;
+    background: darkorange;
+    border-radius: 4rpx;
 }

@@ -1,0 +1,27 @@
+/* pages/gallery/gallery.wxss */
+page{
+    background: #333;
+    height: 100%;
+}
+.container{
+    display: flex;
+}
+scroll-view{
+    height: 100%;
+    white-space: nowrap; 
+    display: flex;
+    align-self: center;
+}
+scroll-view .scroll-item{
+    width: 320px;
+    height: 100%;
+    display: inline-block;
+}
+scroll-view .scroll-item .pic{
+    width: 200px;
+    height:300px;
+    color:#000;
+    display: flex;
+    background: #fff;
+    align-self: center;
+}
