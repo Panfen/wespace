@@ -85,4 +85,3 @@ page{
 .category .category-item.info:before{
   background: url('../../images/system/iconfont-info.png') no-repeat;
 }
-

@@ -52,8 +52,9 @@
     display: flex;
     border-bottom: 0.1rpx solid #ddd;
 }
-.location .map{
+.location .map-navigator{
     width:70%;
+    display: inline-block;
 }
 .location .map map{
     height: 200rpx;

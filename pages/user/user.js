@@ -2,7 +2,7 @@
 var app = getApp();
 Page({
   data:{
-    bgPic:'../../images/bg.jpg',
+    bgPic:'../../images/pages/bg.jpg',
     userInfo:{}
   },
   onLoad:function(options){

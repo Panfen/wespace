@@ -2,7 +2,7 @@
 Page({
   data:{
     name:'',
-    coverPic:'../../images/pic1.jpg',
+    coverPic:'../../images/pages/pic1.jpg',
     remarks:239,
     rentItmes:[
       {
@@ -21,6 +21,14 @@ Page({
       }
     ],
     collected:'',
+    markers: [{
+      iconPath: "../../images/system/iconfont-marker.png",
+      id: 0,
+      latitude: 23.099994,
+      longitude: 113.324520,
+      width: 22,
+      height: 22
+    }],
   },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数

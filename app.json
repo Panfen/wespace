@@ -7,7 +7,9 @@
     "pages/sportsItem/sportsItem",
     "pages/login/login",
     "pages/user/user",
-    "pages/gallery/gallery"
+    "pages/gallery/gallery",
+    "pages/map/map",
+    "pages/allRents/allRents"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -20,13 +22,13 @@
     "list": [{
       "pagePath": "pages/index/index",
       "text": "主页",
-      "iconPath": "./images/icon1.png",
-      "selectedIconPath": "./images/icon1s.png"
+      "iconPath": "./images/system/icon1.png",
+      "selectedIconPath": "./images/system/icon1s.png"
     },{
       "pagePath": "pages/user/user",
       "text": "用户",
-      "iconPath": "./images/icon2.png",
-      "selectedIconPath": "./images/icon2s.png"
+      "iconPath": "./images/system/icon2.png",
+      "selectedIconPath": "./images/system/icon2s.png"
     }]
   }
 }

@@ -1,17 +1,12 @@
 <!--pages/gallery/gallery.wxml-->
 <view class="container">
     <scroll-view scroll-x="true" bindscroll="scrollPics">
-    <view class="scroll-item">
-        <view class="pic">1</view>
-    </view>
-    <view class="scroll-item">
-        <view class="pic">2</view>
-    </view>
-    <view class="scroll-item">
-        <view class="pic">3</view>
-    </view>
-    <view class="scroll-item">
-        <view class="pic">4</view>
-    </view>
+
+        <view class="scroll-item" wx:for="{{pics}}" wx:for-item="pic" wx:key="unique">
+            <view class="pic pic1">
+                <image src="{{pic}}" mode="aspectFit"></image>
+            </view>
+        </view>
     </scroll-view>
+    <text class="pics-count">{{picsCount}}</text>
 </view>

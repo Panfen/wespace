@@ -10,14 +10,15 @@
       <text class="name">精品办公室</text>
       <text class="pics">14张</text>
     </view>
-    
   </view>
 
   <view class="location">
-    <view class="map">
-      <map id="map" longitude="113.324520" latitude="23.099994" scale="14"></map>
-      <text>杭州市西湖区留和路路59号</text>
-    </view>
+    <navigator url="../map/map?latitude={{markers[0].latitude}}&longitude={{markers[0].longitude}}" class="map-navigator">
+      <view class="map">
+        <map id="map" longitude="{{markers[0].longitude}}" latitude="{{markers[0].latitude}}" scale="14" markers="{{markers}}"></map>
+        <text>杭州市西湖区留和路路59号</text>
+      </view>
+    </navigator>
     <view class="remark">
       <view class="border"></view>
       <view class="score">

@@ -5,7 +5,7 @@
   <swiper indicator-dots="true" autoplay="true" interval="5000" duration="1000">
     <block wx:for="{{imgUrls}}" wx:key="unique">
       <swiper-item>
-        <image src="{{item}}" class="slide-image" width="355" height="150"/>
+        <image src="{{item}}" class="slide-image" mode="scaleToFill"/>
       </swiper-item>
     </block>
   </swiper>
@@ -14,7 +14,9 @@
   <view class="content-box">
     <view class="header">
       <text>精品办公</text>
-      <text class="all">全部精品</text>
+      <navigator url="../allRents/allRents">
+        <text class="all">全部精品</text>
+      </navigator>
     </view>
     <view class="body office">
       <view class="body-item" wx:for="{{officeItems}}" wx:for-item="officeItem" wx:key="unique">
@@ -30,7 +32,9 @@
   <view class="content-box">
     <view class="header">
       <text>会议场所</text>
-      <text class="all">全部场所</text>
+      <navigator url="../allRents/allRents">
+        <text class="all">全部场所</text>
+      </navigator>
     </view>
     <view class="body" >
       <view class="body-item single"  wx:for="{{meetingItems}}" wx:for-item="meetingItem" wx:key="unique">
@@ -59,7 +63,9 @@
   <view class="content-box">
     <view class="header">
       <text>运动场所</text>
-      <text class="all">全部场所</text>
+      <navigator url="../allRents/allRents">
+        <text class="all">全部场所</text>
+      </navigator>
     </view>
     <view class="body" >
       <view class="body-item single"  wx:for="{{sportsItems}}" wx:for-item="sportsItem" wx:key="unique">

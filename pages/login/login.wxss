@@ -65,6 +65,6 @@ button.login-btn{
     margin:10px auto;
     border-radius: 30px;
     border:2px solid #3CC51F;
-    background: url('../../images/wechat.png') no-repeat 8px 8px;
+    background: url('../../images/system/wechat.png') no-repeat 8px 8px;
     background-size:60%;
 }

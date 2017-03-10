@@ -1,5 +1,6 @@
 /**app.wxss**/
 page{
+  min-height: 100%;
   background: #F5F5F5;
 }
 .container {

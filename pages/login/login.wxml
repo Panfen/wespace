@@ -1,7 +1,7 @@
 <!--pages/login/login.wxml-->
 <view class="container">
   <view class="logo">
-    <image src="../../images/logo2.png" mode="aspectFit"></image>
+    <image src="../../images/system/logo.png" mode="aspectFit"></image>
   </view>
   <view class="loginbox">
     <view class="usernamebox">
