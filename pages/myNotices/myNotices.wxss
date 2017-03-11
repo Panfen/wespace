@@ -1,0 +1,63 @@
+/* pages/myNotices/myNotices.wxss */
+.news{
+    width: 100%;
+    position: relative;
+    height:186rpx;
+    border-bottom: 0.1rpx solid #ddd;
+}
+.news-box{
+    width: 100%;
+    background: #fff;
+    position: absolute; 
+}
+.news-box:before{
+    content: "";
+    width: 90rpx;
+    height: 90rpx;
+    border-radius: 45rpx;
+    display: inline-block;
+    position: absolute;
+    top:38rpx;
+    left:20rpx;
+    background: rgba(254, 156, 107,0.9) url('../../images/system/iconfont-warning.png') no-repeat center center;
+}
+.news-box.system:before{
+    background: rgba(255, 174, 59,0.9) url('../../images/system/iconfont-notice.png') no-repeat center center;
+}
+
+.news-box .header{
+    display: flex;
+    margin-bottom: 6rpx;
+    margin:20rpx 20rpx 20rpx 130rpx;
+    justify-content: space-between;
+}
+.news-box .header .time{
+    font-size:0.7rem;
+    color:#999;
+}
+.news-box .body{
+    margin:0rpx 20rpx 20rpx 130rpx;
+}
+.news-box .body text{
+    color:#666;
+    font-size:0.75rem;
+}
+.del-box{
+    display: flex;
+    height: 100%;
+    justify-content:flex-end;
+}
+.del-box .del-btn{
+    font-size:1rem;
+    display: inline-block;
+    align-self:flex-end;
+    line-height: 186rpx;
+    color:#fff;
+    text-align: center;
+    background:#F41B0A;
+}
+
+.end{
+    color:#ccc;
+    font-style: italic;
+}

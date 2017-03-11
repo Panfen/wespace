@@ -9,7 +9,11 @@
     "pages/user/user",
     "pages/gallery/gallery",
     "pages/map/map",
-    "pages/allRents/allRents"
+    "pages/allRents/allRents",
+    "pages/myRents/myRents",
+    "pages/myCollects/myCollects",
+    "pages/myRemarks/myRemarks",
+    "pages/myNotices/myNotices"
   ],
   "window":{
     "backgroundTextStyle":"light",

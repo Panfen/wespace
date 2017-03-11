@@ -1,0 +1,15 @@
+/* pages/myRents/myRents.wxss */
+
+
+.address-item{
+    position: relative;
+    width:100%;
+}
+.address-item-top{
+    height:60rpx;
+    background: #fff;
+    width:100%;
+    top:0px;
+    left:0px;
+    position: absolute;
+}

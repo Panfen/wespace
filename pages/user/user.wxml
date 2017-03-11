@@ -8,22 +8,32 @@
   </view>
 
   <view class="category">
-    <view class="category-item list">
-      <view><text>租用记录</text></view>
-      <view class="enter"></view>
-    </view>
+    <navigator url="../myRents/myRents">
+      <view class="category-item list">
+        <view><text>租用记录</text></view>
+        <view class="enter"></view>
+      </view>
+    </navigator>
 
-    <view class="category-item collect">
-      <view><text>我的收藏</text></view>
-      <view class="enter"></view>
-    </view>
-    <view class="category-item remark">
-      <view><text>我的评价</text></view>
-      <view class="enter"></view>
-    </view>
-    <view class="category-item info">
-      <view><text>我的消息</text></view>
-      <view class="enter"></view>
-    </view>
+    <navigator url="../myCollects/myCollects">
+      <view class="category-item collect">
+        <view><text>我的收藏</text></view>
+        <view class="enter"></view>
+      </view>
+    </navigator>
+
+    <navigator url="../myRemarks/myRemarks">
+      <view class="category-item remark">
+        <view><text>我的评价</text></view>
+        <view class="enter"></view>
+      </view>
+    </navigator>
+
+    <navigator url="../myNotices/myNotices">
+      <view class="category-item info">
+        <view><text>我的消息</text></view>
+        <view class="enter"></view>
+      </view>
+    </navigator>
   </view>
 </view>

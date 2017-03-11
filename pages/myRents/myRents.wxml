@@ -1,0 +1,22 @@
+<!--pages/myRents/myRents.wxml-->
+
+<view class="container">
+    <view class="address-item" wx:for="{{addressList}}" >
+        <view 
+            style="{{item.txtStyle}}"  
+            bindtouchstart="touchS" 
+            bindtouchmove="touchM" 
+            bindtouchend="touchE"  
+            data-index="{{index}}"  
+            class="address-item-top" >
+            1212121212
+        </view>
+
+        <!--这里是左滑按钮部分----start-->
+        <view bindtap="delItem" class="posit">
+            <view class="editor" data-addressid="{{item.address.ID}}" catchtap="setDefaultAddress">设为默认地址</view>
+            <view class="del" data-addressid="{{item.address.ID}}" data-index="{{index}}" catchtap="delAddress">删除              </view>
+        </view>
+        <!--这里是左滑按钮部分----end-->
+    </view>
+</view>
