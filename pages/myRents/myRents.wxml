@@ -1,22 +1,15 @@
 <!--pages/myRents/myRents.wxml-->
 
 <view class="container">
-    <view class="address-item" wx:for="{{addressList}}" >
-        <view 
-            style="{{item.txtStyle}}"  
-            bindtouchstart="touchS" 
-            bindtouchmove="touchM" 
-            bindtouchend="touchE"  
-            data-index="{{index}}"  
-            class="address-item-top" >
-            1212121212
-        </view>
-
-        <!--这里是左滑按钮部分----start-->
-        <view bindtap="delItem" class="posit">
-            <view class="editor" data-addressid="{{item.address.ID}}" catchtap="setDefaultAddress">设为默认地址</view>
-            <view class="del" data-addressid="{{item.address.ID}}" data-index="{{index}}" catchtap="delAddress">删除              </view>
-        </view>
-        <!--这里是左滑按钮部分----end-->
+  <view class="record">
+    <view class="img"> <image src="../../images/pages/pic7.jpg" mode="scaleToFill"></image> </view>
+    <view class="content">
+      <view class="item"><text class="title">科院14号羽毛球场</text></view>
+      <view class="item"><text class="cost">¥120</text></view>
+      <view class="item">
+        <text class="time">2017-03-12 21:28:43</text>
+        <text class="remark">评论</text>
+      </view>
     </view>
+  </view>
 </view>

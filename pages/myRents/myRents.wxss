@@ -1,15 +1,48 @@
 /* pages/myRents/myRents.wxss */
-
-
-.address-item{
+.record{
+    width: 100%;
+    display: flex;
     position: relative;
-    width:100%;
+    border-bottom: 0.1rpx solid #ddd;
+    margin-bottom:10rpx;
 }
-.address-item-top{
-    height:60rpx;
-    background: #fff;
-    width:100%;
-    top:0px;
-    left:0px;
+.record .img{
+    top:20rpx;
+    left:20rpx;
+    width:200rpx;
+    height: 160rpx;
+    background: #ccc;
     position: absolute;
+}
+.record .img image{
+    width:100%;
+    height: 100%;
+}
+.record .content{
+    padding:20rpx 20rpx 20rpx 240rpx;
+    width: 100%;
+    height: 160rpx;
+    background: #fff;
+}
+.record .content .item:first-child{
+    margin-bottom: 10rpx;
+}
+.record .content .item:last-child{
+    margin-top: 6rpx;
+    display: flex;
+    justify-content: space-between;
+}
+.record .content .item .time{
+    color:#ccc;
+    font-size: 0.8rem;
+}
+.record .content .item .cost{
+    color:#3DB85D;
+    font-size: 0.8rem;
+}
+.record .content .item .remark{
+    color:darkorange;
+    font-size:0.6rem;
+    border:0.1rpx solid darkorange;
+    padding: 4rpx 12rpx;
 }

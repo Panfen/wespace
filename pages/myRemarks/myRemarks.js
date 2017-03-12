@@ -1,19 +1,24 @@
 // pages/myRemarks/myRemarks.js
 Page({
-  data:{},
+  data:{
+    animationData:{}
+  },
   onLoad:function(options){
-    // 页面初始化 options为页面跳转所带来的参数
+    //
   },
-  onReady:function(){
-    // 页面渲染完成
-  },
-  onShow:function(){
-    // 页面显示
-  },
-  onHide:function(){
-    // 页面隐藏
-  },
-  onUnload:function(){
-    // 页面关闭
+  createAnimation:function(){
+    var animation = wx.createAnimation({
+      duration: 1000,
+      timingFunction: 'ease',
+    });
+
+    this.animation = animation;
+
+    animation.height(0).step();
+
+    this.setData({
+      animationData:animation.export()
+    })
   }
+  
 })

@@ -1,2 +1,7 @@
 <!--pages/myRemarks/myRemarks.wxml-->
-<text>pages/myRemarks/myRemarks.wxml</text>
+<view class="container">
+    <view class="box" animation="{{animationData}}">
+        <text bindtap="createAnimation">开始动画</text>
+    </view>
+    
+</view>

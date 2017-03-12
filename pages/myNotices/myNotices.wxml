@@ -2,33 +2,21 @@
 
 <view class="container">
 
-  <view class="news">
-    <view class="news-box" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" style="{{scrollStyle}}">
+<view class="news" wx:for="{{news}}" wx:for-item="new">
+    <view class="news-box {{new.type}}" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" 
+          style="{{new.scrollStyle}}" data-id="{{index}}">
         <view class="header">
-            <text class="title">临近租期提醒</text>
-            <text class="time">今天 20:10</text>
+            <text class="title">{{new.title}}</text>
+            <text class="time">{{new.time}}</text>
         </view>
         <view class="body">
-            <text>尊敬的客户，您在恒生科技园13号楼418室的租用将在5天后到期，请及时续期</text>
+            <text>{{new.body}}</text>
         </view>
     </view>
     <view class="del-box">
-        <text class="del-btn" style="width:{{btnWidth}}rpx">删除</text>
+        <text class="del-btn" style="width:{{btnWidth}}rpx" bindtap="delMessage" data-id="{{index}}">删除</text>
     </view>
   </view>
 
-  <view class="news">
-    <view class="news-box system">
-        <view class="header">
-            <text class="title">卡券到期提醒</text>
-            <text class="time">03.11 18:47</text>
-        </view>
-        <view class="body">
-            <text>尊敬的客户，您有一张价值50元卡券即将到期，点击使用</text>
-        </view>
-    </view>
-    <view class="del-box">
-    </view>
-  </view>
   <view class="end">--EOF--</view>
 </view>

@@ -1,1 +1,13 @@
 /* pages/myRemarks/myRemarks.wxss */
+
+.container{
+    position: relative;
+}
+.box{
+    width:100%;
+    height: 200px;
+    background: red;
+    top:0px;
+    left:0px;
+    position: absolute;
+}

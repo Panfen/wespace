@@ -1,2 +1,19 @@
 <!--pages/myCollects/myCollects.wxml-->
-<text>pages/myCollects/myCollects.wxml</text>
+
+<view class="container">
+  <view class="collect">
+    <view class="img"> <image src="../../images/pages/pic7.jpg" mode="scaleToFill"></image> </view>
+    <view class="content">
+      <view class="item"><text class="title">科院14号羽毛球场</text></view>
+      <view class="item">
+        <text class="location">杭州市西湖区留和路318号</text>
+        <text class="location">1.5km</text>
+      </view>
+      <view class="item"><text class="cost">¥60/小时</text></view>
+      <view class="item">
+        <text class="look">看相似</text>
+        <text class="remark">移除</text>
+      </view>
+    </view>
+  </view>
+</view>
