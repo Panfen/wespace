@@ -22,20 +22,20 @@
 .collect .content{
     padding:20rpx 20rpx 20rpx 240rpx;
     width: 100%;
-    height: 160rpx;
     background: #fff;
 }
-.collect .content .item{
+.collect .content .item.loc{
     display: flex;
     justify-content: space-between;
 }
 .collect .content .item:first-child{
     margin-bottom: 10rpx;
 }
-.collect .content .item:last-child{
-    margin-top: 6rpx;
-}
 .collect .content .item .location{
+    color:#666;
+    font-size: 0.75rem;
+}
+.collect .content .item .distance{
     color:#999;
     font-size: 0.8rem;
 }
@@ -43,9 +43,15 @@
     color:#3DB85D;
     font-size: 0.8rem;
 }
-.collect .content .item .time{
-    color:#ccc;
-    font-size: 0.8rem;
+.collect .content .item:last-child{
+    margin-top: 6rpx;
+}
+.collect .content .item .look{
+    color:#3DB85D;
+    font-size:0.6rem;
+    border:0.1rpx solid #3DB85D;
+    padding: 4rpx 12rpx;
+    margin-right: 12rpx;
 }
 .collect .content .item .remark{
     color:darkorange;

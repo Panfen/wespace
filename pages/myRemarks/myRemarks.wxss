@@ -1,13 +1,103 @@
-/* pages/myRemarks/myRemarks.wxss */
-
+/* pages/myRemark-infos/myRemark-infos.wxss */
 .container{
     position: relative;
 }
-.box{
-    width:100%;
-    height: 200px;
-    background: red;
-    top:0px;
-    left:0px;
+.container .menu{
+    top:20rpx;
+    right:20rpx;
+    width:60rpx;
+    height:60rpx;
+    z-index:10;
     position: absolute;
+    background:url('../../images/system/iconfont-menu.png') no-repeat center center;
+}
+.container .menu-box{
+    top:80rpx;
+    right:20rpx;
+    padding:10rpx;
+    z-index:11;
+    box-shadow: 1px 1px 1px #ccc;
+    position: absolute;
+}
+.container .menu-box.display-false{
+    display: none;
+}
+.container .menu-box text{
+    display: block;
+    padding-left: 60rpx;
+    margin-bottom: 10rpx;
+    font-size: 0.7rem;
+    background:url('../../images/system/iconfont-edit.png') no-repeat;
+}
+.container .menu-box text:last-child{
+    background:url('../../images/system/iconfont-del.png') no-repeat;
+}
+.remark{
+    width: 100%;
+    border-bottom: 0.1rpx solid #ddd;
+    margin-bottom:10rpx;
+}
+.remark-info,.remark-content{
+    display: flex;
+    position: relative; 
+    background: #fff;
+}
+.img,.score{
+    top:20rpx;
+    left:20rpx;
+    width:200rpx;
+    height: 160rpx;
+    position: absolute;
+}
+.score{
+    top:0;
+    left:40rpx;
+    width:180rpx;
+}
+.remark-info .img image{
+    width:100%;
+    height: 100%;
+}
+.remark-info .content,.remark-content .words{
+    padding:20rpx 20rpx 20rpx 240rpx;
+    width: 100%;
+    height: 160rpx;
+    background: #fff;
+}
+.remark-info .content .item:first-child{
+    margin-bottom: 10rpx;
+}
+.remark-info .content .item:last-child{
+    margin-top: 6rpx;
+    display: flex;
+    justify-content: space-between;
+}
+.remark-info .content .item .time{
+    color:#ccc;
+    font-size: 0.8rem;
+}
+.remark-info .content .item .cost{
+    color:#3DB85D;
+    font-size: 0.8rem;
+}
+.remark-content .score view{
+    font-size:0.8rem;
+}
+.remark-content .score view text{
+    color:orangered;
+}
+.remark-content .words{
+    padding: 0 20rpx 0 240rpx;
+    font-size:0.8rem;
+    color: #666;
+    display: -webkit-box;
+    line-height: 40rpx;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:4;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+.remark-content{
+    padding-bottom: 20rpx;
 }
