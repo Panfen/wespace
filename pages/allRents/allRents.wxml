@@ -1,2 +1,30 @@
 <!--pages/allRents/allRents.wxml-->
-<text>pages/allRents/allRents.wxml</text>
+
+<view class="container">
+  <view class="search-box">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <input class="search-input" type="text" name="searchKey" placeholder="输入查找的内容"/>
+      <button class="search-btn" form-type="submit">搜索</button>
+    </form>
+  </view>
+  <view class="condition">
+    <view class="choose-box">
+      <view class="choose-item selected" bindtap="choosePlace">全城</view>
+      <view class="choose-item" bindtap="choosePrice">价格</view>
+      <view class="choose-item" bindtap="chooseOrder">排序</view>
+      <view class="choose-item" bindtap="chooseOther">筛选</view>
+    </view>
+  </view>
+  <view class="showbox">
+    <view class="box-cover">
+      <view class="coobox price-box">
+        价格
+        <view class="section section_gap">
+          <view class="section__title">slider</view>
+          <slider name="slider" show-value ></slider>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
