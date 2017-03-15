@@ -103,5 +103,49 @@ form button.search-btn:after{
     background: rgba(0, 0, 0, 0.25);
 }
 .box-cover .coobox{
+    padding:20rpx;
     background: #fff;
 }
+.box-cover .coobox .title{
+    padding-left: 28rpx;
+    font-size: 0.75rem;
+    color: #666;
+}
+.box-cover.hidden{
+    display: none;
+}
+.box-cover .coobox .place-box{
+    display: flex;
+    justify-content: space-between;
+}
+.box-cover .coobox .place-box .areas{
+    width: 24%;
+}
+.box-cover .coobox .place-box .areas text{
+    display: block;
+    padding:12rpx 20rpx;
+    background: #fff;
+    font-size: 0.75rem;
+    color:#666;
+    border-bottom: 0.1rpx solid rgba(100, 100, 100, 0.1);
+}
+.box-cover .coobox .place-box .areas text.selected{
+    background: #eee;
+}
+.box-cover .coobox .place-box .items{
+    width: 76%;
+    height: 1060rpx;
+    background: #eee;
+}
+.box-cover .coobox .place-box .items text{
+    font-size: 0.75rem;
+    color:#666;
+    display: block;
+    padding:12rpx 60rpx;
+    border-bottom: 0.1rpx solid rgba(100, 100, 100, 0.1);
+}
+.box-cover .coobox.place{
+    padding:0;
+    height: 1060rpx;
+}
+

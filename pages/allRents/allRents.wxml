@@ -16,15 +16,49 @@
     </view>
   </view>
   <view class="showbox">
-    <view class="box-cover">
-      <view class="coobox price-box">
-        价格
-        <view class="section section_gap">
-          <view class="section__title">slider</view>
-          <slider name="slider" show-value ></slider>
+
+    <view class="box-cover {{conditionMenu.showPlaceBox == true? '': 'hidden'}}">
+      <view class="coobox place">
+        <view class="place-box">
+          <view class="areas" bindtap="placeChoose" data-id="23">
+            <text class="area selected" data-id="0">附近</text>
+            <text class="area" data-id="1">城区</text>
+            <text class="area" data-id="2">郊区</text>
+            <text class="area" data-id="3">高校</text>
+            <text class="area" data-id="4">景区</text>
+            <text class="area" data-id="5">广场</text>
+            <text class="area" data-id="6">商城</text>
+            <text class="area" data-id="7">车站</text>
+            <text class="area" data-id="8">不限</text>
+          </view>
+          <view class="items">
+            <text class="item" wx:for="{{selectedPlace}}" wx:for-item="place" wx:key="unique">{{place}}</text>
+          </view>
         </view>
       </view>
     </view>
+
+    <view class="box-cover {{conditionMenu.showPriceBox == true? '': 'hidden'}}">
+      <view class="coobox price-box">
+        <text class="title">价格</text>
+        <view class="section section_gap">
+          <slider name="slider" show-value value="60" bindchange="priceSlider"></slider>
+        </view>
+      </view>
+    </view>
+
+    <view class="box-cover {{conditionMenu.showOrderBox == true? '': 'hidden'}}">
+      <view class="coobox price-box">
+        <text class="title">排序</text>
+      </view>
+    </view>
+
+    <view class="box-cover {{conditionMenu.showOtherBox == true? '': 'hidden'}}">
+      <view class="coobox price-box">
+        <text class="title">筛选</text>
+      </view>
+    </view>
+
   </view>
 </view>
 
