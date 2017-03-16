@@ -9,30 +9,22 @@
   </view>
   <view class="condition">
     <view class="choose-box">
-      <view class="choose-item selected" bindtap="choosePlace">全城</view>
-      <view class="choose-item" bindtap="choosePrice">价格</view>
-      <view class="choose-item" bindtap="chooseOrder">排序</view>
-      <view class="choose-item" bindtap="chooseOther">筛选</view>
+      <view class="choose-item {{conditionMenu.showPlaceBox != true? '': 'selected'}}" bindtap="choosePlace">{{conditionMenus[0]}}</view>
+      <view class="choose-item {{conditionMenu.showPriceBox != true? '': 'selected'}}" bindtap="choosePrice">{{conditionMenus[1]}}</view>
+      <view class="choose-item {{conditionMenu.showOrderBox != true? '': 'selected'}}" bindtap="chooseOrder">{{conditionMenus[2]}}</view>
+      <view class="choose-item {{conditionMenu.showFilterBox != true? '': 'selected'}}" bindtap="chooseFilter">{{conditionMenus[3]}}</view>
     </view>
   </view>
   <view class="showbox">
-
+    <!--START box-cover-->
     <view class="box-cover {{conditionMenu.showPlaceBox == true? '': 'hidden'}}">
       <view class="coobox place">
         <view class="place-box">
-          <view class="areas" bindtap="placeChoose" data-id="23">
-            <text class="area selected" data-id="0">附近</text>
-            <text class="area" data-id="1">城区</text>
-            <text class="area" data-id="2">郊区</text>
-            <text class="area" data-id="3">高校</text>
-            <text class="area" data-id="4">景区</text>
-            <text class="area" data-id="5">广场</text>
-            <text class="area" data-id="6">商城</text>
-            <text class="area" data-id="7">车站</text>
-            <text class="area" data-id="8">不限</text>
+          <view class="areas" bindtap="placeChoose">
+            <text class="area {{selectedId == index ? 'selected' : ''}}" data-id="{{index}}" wx:for="{{allReas}}" wx:for-item="area" wx:key="unique">{{area}}</text>
           </view>
           <view class="items">
-            <text class="item" wx:for="{{selectedPlace}}" wx:for-item="place" wx:key="unique">{{place}}</text>
+            <text class="item" wx:for="{{selectedPlace}}" wx:for-item="place" wx:key="unique" bindtap="placeDetailChoose" data-item="{{place}}">{{place}}</text>
           </view>
         </view>
       </view>
@@ -42,23 +34,103 @@
       <view class="coobox price-box">
         <text class="title">价格</text>
         <view class="section section_gap">
-          <slider name="slider" show-value value="60" bindchange="priceSlider"></slider>
+          <slider name="slider" show-value value="60" bindchange="priceSlider" ></slider>
+        </view>
+        <view class="control">
+          <text class="" bindtap="priceChoose" data-price="{{sliderPrice}}">确定</text>
         </view>
       </view>
     </view>
 
     <view class="box-cover {{conditionMenu.showOrderBox == true? '': 'hidden'}}">
-      <view class="coobox price-box">
-        <text class="title">排序</text>
+      <view class="coobox order-box">
+        <text class="title"></text>
+        <view class="radio-box">
+          <view class="radio radio1">
+            <view class="radio-item" wx:for="{{radios1}}" wx:for-item="radio" wx:key="unique">
+              <icon type="{{radio.checked == true ? 'success' : 'circle'}}" size="15"/> 
+              <text bindtap="orderChoose" data-index="{{index}}" data-type="1">{{radio.item}}</text> 
+            </view>
+          </view>
+          <view class="radio radio2">
+            <view class="radio-item" wx:for="{{radios2}}" wx:for-item="radio" wx:key="unique">
+              <icon type="{{radio.checked == true ? 'success' : 'circle'}}" size="15"/> 
+              <text bindtap="orderChoose" data-index="{{index}}" data-type="2">{{radio.item}}</text> 
+            </view>
+          </view>
+        </view>
+        <view class="control">
+          <text class="" bindtap="ensureOrder">确定</text>
+        </view>
       </view>
     </view>
 
-    <view class="box-cover {{conditionMenu.showOtherBox == true? '': 'hidden'}}">
-      <view class="coobox price-box">
-        <text class="title">筛选</text>
+    <view class="box-cover {{conditionMenu.showFilterBox == true? '': 'hidden'}}">
+      <view class="coobox filter-box">
+        <view class="tags">
+          <text class="filter {{filter.checked == true? 'selected' : ''}}" wx:for="{{filters}}" wx:for-item="filter" wx:key="unique" bindtap="filterChoose" data-index="{{index}}">{{filter.item}}</text>
+        </view>
+        <view class="control">
+          <text class="" bindtap="ensureFilter">确定</text>
+        </view>
       </view>
     </view>
+    <!--END box-cover-->
 
+    <!--START rent-box-->
+    <view class="rent-box">
+      <view class="rent-item">
+        <view class="img"> <image src="../../images/pages/pic7.jpg" mode="scaleToFill"></image> </view>
+        <view class="content">
+          <view class="item"><text class="title">科院14号羽毛球场</text></view>
+          <view class="item"><text class="cost">¥120</text></view>
+          <view class="item">
+            <text class="time">2017-03-12 21:28:43</text>
+          </view>
+        </view>
+      </view>
+      <view class="rent-item">
+        <view class="img"> <image src="../../images/pages/pic7.jpg" mode="scaleToFill"></image> </view>
+        <view class="content">
+          <view class="item"><text class="title">科院14号羽毛球场</text></view>
+          <view class="item"><text class="cost">¥120</text></view>
+          <view class="item">
+            <text class="time">2017-03-12 21:28:43</text>
+          </view>
+        </view>
+      </view>
+      <view class="rent-item">
+        <view class="img"> <image src="../../images/pages/pic7.jpg" mode="scaleToFill"></image> </view>
+        <view class="content">
+          <view class="item"><text class="title">科院14号羽毛球场</text></view>
+          <view class="item"><text class="cost">¥120</text></view>
+          <view class="item">
+            <text class="time">2017-03-12 21:28:43</text>
+          </view>
+        </view>
+      </view>
+      <view class="rent-item">
+        <view class="img"> <image src="../../images/pages/pic7.jpg" mode="scaleToFill"></image> </view>
+        <view class="content">
+          <view class="item"><text class="title">科院14号羽毛球场</text></view>
+          <view class="item"><text class="cost">¥120</text></view>
+          <view class="item">
+            <text class="time">2017-03-12 21:28:43</text>
+          </view>
+        </view>
+      </view>
+      <view class="rent-item">
+        <view class="img"> <image src="../../images/pages/pic7.jpg" mode="scaleToFill"></image> </view>
+        <view class="content">
+          <view class="item"><text class="title">科院14号羽毛球场</text></view>
+          <view class="item"><text class="cost">¥120</text></view>
+          <view class="item">
+            <text class="time">2017-03-12 21:28:43</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!--END rent-box-->
   </view>
 </view>
 

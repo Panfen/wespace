@@ -2,11 +2,13 @@
 Page({
   data:{
     conditionMenu:{
-      showPlaceBox:true,
+      showPlaceBox:false,
       showPriceBox:false,
       showOrderBox:false,
-      showOtherBox:false
+      showFilterBox:false
     },
+    conditionMenus:['全城','价格','排序','筛选'],
+    allReas:['附近','城区','郊区','高校','景区','广场','商城','车站','不限'],
     allPlace:[
       ['1km','2km','3km','4km','5km'],
       ['西湖区','滨江区','上城区','江干区','下城区','拱墅区','萧山区','余杭区'],
@@ -16,13 +18,21 @@ Page({
       ['吴山广场','运河广场','武林广场','黄龙世纪广场','西城广场','庆春广场','时代广场','西城广场','中大广场','市心广场'],
       ['西溪印象城','城西银泰','西湖银泰','世纪联华','好又多','物美','华润万家','大润发','万象城'],
       ['汽车西站','汽车北站','汽车南站','汽车东站','东站','城站','九堡客运中心'],
-      ['随便1','随便2','随便3','随便4','随便5','随便6','随便7']
+      ['广知楼','健行楼','语林楼','博易楼','仁和楼','畅远楼','郁文楼','理学楼','法学楼','家和东苑','家和西苑','图书馆','体育馆','操场','家和食堂','养贤府','生活区大门','正大门','后山']
     ],
+    selectedId:0,
     selectedPlace:[],
+    sliderPrice:60,
+    radios1:[{item:'价格',checked:true},{item:'距离',checked:false},{item:'评分',checked:false},{item:'有停车场',checked:false},{item:'有餐饮',checked:false},
+    ],
+    radios2:[{item:'价格',checked:true},{item:'距离',checked:false},{item:'评分',checked:false},{item:'有停车场',checked:false},{item:'有餐饮',checked:false},
+    ],
+    filters:[{item:'满减',checked:true},{item:'支持预约',checked:false},{item:'优惠券',checked:false},{item:'纸质发票',checked:false},{item:'团购优惠',checked:false},{item:'周末优惠',checked:false},{item:'会员卡',checked:false}
+    ],
   },
   onLoad:function(options){
     this.setData({
-      selectedPlace : this.data.allPlace[0]
+      selectedPlace : this.data.allPlace[0],
     });
   },
   formSubmit: function(e) {
@@ -40,26 +50,77 @@ Page({
   chooseOrder:function(){
     this.showConditionMenu('showOrderBox');
   },
-  chooseOther:function(){
-    this.showConditionMenu('showOtherBox');
+  chooseFilter:function(){
+    this.showConditionMenu('showFilterBox');
   },
 
   placeChoose:function(e){
     this.setData({
+      selectedId : e.target.dataset.id,
       selectedPlace : this.data.allPlace[Number(e.target.dataset.id)]
     });
   },
-
-  priceSlider:function(e){
-    
+  placeDetailChoose:function(e){
+    this.setSelectItem(0,e.target.dataset.item);
   },
 
+  priceSlider:function(e){
+    this.setData({sliderPrice:e.detail.value});
+  },
+  priceChoose:function(e){
+    this.setSelectItem(1,e.target.dataset.price);
+  },
+
+  orderChoose:function(e){
+    var index = e.target.dataset.index;
+    var type = e.target.dataset.type;
+    var radios1 = this.data.radios1;
+    var radios2 = this.data.radios2;
+    if(type == 1){
+      for(var item in radios1){
+        radios1[item].checked = false;
+      };
+      radios1[index].checked = true;
+    }else{
+      for(var item in radios2){
+        radios2[item].checked = false;
+      };
+      radios2[index].checked = true;
+    }
+    this.setData({
+      radios1 : radios1,
+      radios2 : radios2
+    })
+  },
+  ensureOrder:function(){
+    this.setSelectItem(2,'已排序');
+  },
+
+  filterChoose:function(e){
+    var index = e.target.dataset.index;
+    var filters = this.data.filters;
+    filters[index].checked = !filters[index].checked;
+    this.setData({filters:filters});
+  },
+  ensureFilter:function(){
+    this.setSelectItem(3,'已筛选');
+  },
+
+  //tools
   showConditionMenu:function(menu){
     var conditionMenu = this.data.conditionMenu;
     for(var item in conditionMenu){
-      conditionMenu[item] = menu == item ? true:false;
+      conditionMenu[item] = (menu == item && menu != false) ? true:false;
     };
     this.setData({conditionMenu:conditionMenu});
   },
 
+  setSelectItem:function(menuIndex,item){
+    this.showConditionMenu(false);
+    var conditionMenus = this.data.conditionMenus;
+    conditionMenus[menuIndex] = item;
+    this.setData({
+      conditionMenus : conditionMenus
+    });
+  }
 })
