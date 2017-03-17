@@ -1,4 +1,8 @@
 /* pages/allRents/allRents.wxss */
+.container.fixed{
+    position: fixed;
+    width: 100%;
+}
 .search-box{
     width: 100%;
     background: #fff;

@@ -1,6 +1,6 @@
 <!--pages/allRents/allRents.wxml-->
 
-<view class="container">
+<view class="container {{(conditionMenu.showPlaceBox == true || conditionMenu.showPriceBox == true || conditionMenu.showOrderBox == true || conditionMenu.showFilterBox == true) ? 'fixed' : ''}}">
   <view class="search-box">
     <form bindsubmit="formSubmit" bindreset="formReset">
       <input class="search-input" type="text" name="searchKey" placeholder="输入查找的内容"/>

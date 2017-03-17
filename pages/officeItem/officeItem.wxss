@@ -1,9 +1,11 @@
 /* pages/item/item.wxss */
 .pic-gallery{
+    width: 100%;
     height: 400rpx;
     position: relative;
 }
 .pic-gallery image{
+    width:100%;
     height: 100%;
 }
 .pic-gallery .btn-box{

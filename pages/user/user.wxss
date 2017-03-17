@@ -9,6 +9,7 @@ page{
   position: relative;
 }
 .bg-pic image{
+  width: 100%;
   height: 100%;
 }
 .bg-pic image.header{
@@ -27,7 +28,7 @@ page{
   position: absolute;
   top:40rpx;
   right:60rpx;
-  background: url('../../images/system/iconfont-share.png');
+  background: url('../../images/system/iconfont-share.png') no-repeat;
 }
 .category{
     width:100%;
