@@ -18,7 +18,7 @@ Page({
     officeItems:[
       {
         pic:'../../images/pages/pic1.jpg',
-        text:'精品办公室'
+        text:'舒适型办公室'
       },
       {
         pic:'../../images/pages/pic2.jpg',

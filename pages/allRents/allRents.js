@@ -29,6 +29,62 @@ Page({
     ],
     filters:[{item:'满减',checked:true},{item:'支持预约',checked:false},{item:'优惠券',checked:false},{item:'纸质发票',checked:false},{item:'团购优惠',checked:false},{item:'周末优惠',checked:false},{item:'会员卡',checked:false}
     ],
+    rents:[
+      {
+        name:'东看台足球场',
+        img:'../../images/pages/pic12.jpg',
+        score:4.8,
+        location:'杭州市西湖区留和路288号',
+        distance:'600m',
+        cost:'¥60/h',
+        tags:['工作日半价','满减']
+      },
+      {
+        name:'室内篮球场',
+        img:'../../images/pages/pic8.jpg',
+        score:4.8,
+        location:'杭州市西湖区留和路288号',
+        distance:'600m',
+        cost:'¥40/h',
+        tags:['会员卡','优惠券']
+      },
+      {
+        name:'少年兵乓球室',
+        img:'../../images/pages/pic10.jpg',
+        score:4.2,
+        location:'杭州市西湖区留和路288号',
+        distance:'710km',
+        cost:'¥20/h',
+        tags:['陪练','满2减1']
+      },
+      {
+        name:'屏峰网球场',
+        img:'../../images/pages/pic9.jpg',
+        score:4.7,
+        location:'杭州市西湖区留和路288号',
+        distance:'970m',
+        cost:'¥30/h',
+        tags:['会员卡85折']
+      },
+      {
+        name:'科院新羽毛球场',
+        img:'../../images/pages/pic7.jpg',
+        score:4.6,
+        location:'杭州市西湖区留和路318号',
+        distance:'950m',
+        cost:'¥30/h',
+        tags:['满5减1']
+      },
+      {
+        name:'朝晖游泳馆',
+        img:'../../images/pages/pic11.jpg',
+        score:4.7,
+        location:'杭州市下城区潮王路18号',
+        distance:'18.17km',
+        cost:'¥50/h',
+        tags:['会员卡85折','满减']
+      },
+    ]
   },
   onLoad:function(options){
     this.setData({

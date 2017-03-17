@@ -217,50 +217,63 @@ form button.search-btn:after{
     color: #fff;
     border:0.1rpx solid #06BD04; 
 }
-
 .rent-box .rent-item{
     padding:20rpx;
     background: #fff;
 }
-
 .rent-box .rent-item{
     width: 100%;
     display: flex;
-    position: relative;
     border-bottom: 0.1rpx solid #ddd;
     margin-bottom:10rpx;
 }
 .rent-box .rent-item .img{
-    top:20rpx;
-    left:20rpx;
-    width:200rpx;
+    width:32%;
     height: 160rpx;
-    background: #ccc;
-    position: absolute;
 }
 .rent-box .rent-item .img image{
     width:100%;
     height: 100%;
 }
 .rent-box .rent-item .content{
-    padding:0 20rpx 0 240rpx;
-    width: 100%;
+    width: 68%;
+    padding:0 40rpx 0 20rpx;
     height: 160rpx;
     background: #fff;
 }
-.rent-box .rent-item .content .item:first-child{
-    margin-bottom: 10rpx;
+.rent-box .rent-item .content .title{
+    margin-bottom: 12rpx;
 }
-.rent-box .rent-item .content .item:last-child{
-    margin-top: 6rpx;
+.rent-box .rent-item .content .title .score{
+    color:darkorange;
+    padding-left: 10rpx;
+    font-size: 0.75rem;
+}
+.rent-box .rent-item .content .where{
+    margin: 6rpx 0 18rpx 0;
     display: flex;
     justify-content: space-between;
 }
-.rent-box .rent-item .content .item .time{
-    color:#ccc;
-    font-size: 0.8rem;
+.rent-box .rent-item .content .where .location{
+    font-size: 0.75rem;
+    color: #666;
 }
-.rent-box .rent-item .content .item .cost{
+.rent-box .rent-item .content .where .distance{
+    font-size: 0.70rem;
+    color: #999;
+}
+.rent-box .rent-item .content .price{
+    display: flex;
+}
+.rent-box .rent-item .content .price .cost{
     color:#3DB85D;
-    font-size: 0.8rem;
+}
+.rent-box .rent-item .content .price .tag{
+    border:1px solid darkorange;
+    margin:0 10rpx;
+    color:darkorange;
+    font-size:0.6rem;
+    padding:0 10rpx;
+    line-height: 40rpx;
+    display: inline-block;
 }
