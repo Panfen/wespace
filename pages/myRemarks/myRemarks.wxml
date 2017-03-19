@@ -1,30 +1,31 @@
 <!--pages/myRemarks/myRemarks.wxml-->
 
 <view class="container">
-  <view class="menu" bindtap="createAnimation" animation="{{animationData}}"></view>
-  <view class="menu-box display-{{menuOpen}}">
-    <text>追加</text>
-    <text>删除</text>
-  </view>
-  <view class="remark">
-    <view class="remark-info">
-      <view class="img"> <image src="../../images/pages/pic7.jpg" mode="scaleToFill"></image> </view>
-        <view class="content">
-        <view class="item"><text class="title">科院14号羽毛球场</text></view>
-        <view class="item"><text class="cost">¥120</text></view>
-        <view class="item">
-            <text class="time">2017-03-12 21:28:43</text>
+  <view class="container-item {{remarkItem.show == true ? '' : 'hidden'}}" wx:for="{{remarks}}" wx:for-item="remarkItem" wx:key="unique">
+    <view class="menu" bindtap="createAnimation" animation="{{animationData}}"></view>
+    <view class="menu-box display-{{menuOpen}}">
+      <text bindtap="appendRemark">追加</text>
+      <text bindtap="deleteRemark" data-index="{{index}}">删除</text>
+    </view>
+    <view class="remark">
+      <view class="remark-info">
+        <view class="img"> <image src="{{remarkItem.img}}" mode="scaleToFill"></image> </view>
+          <view class="content">
+          <view class="item"><text class="title">{{remarkItem.title}}</text></view>
+          <view class="item"><text class="cost">{{remarkItem.cost}}</text></view>
+          <view class="item">
+              <text class="time">{{remarkItem.time}}</text>
+          </view>
         </view>
       </view>
-    </view>
-    <view class="remark-content">
-      <view class="score">
-        <view>环境：<text>4.5</text> </view>
-        <view>设备：<text>4.5</text> </view>
-        <view>价格：<text>4.0</text> </view>
+      <view class="remark-content">
+        <view class="score">
+          <view>环境：<text>{{remarkItem.score1}}</text> </view>
+          <view>设备：<text>{{remarkItem.score2}}</text> </view>
+          <view>价格：<text>{{remarkItem.score3}}</text> </view>
+        </view>
+        <view class="words">{{remarkItem.words}}</view>
       </view>
-      <view class="words">这个体育馆是科院新建不久的，场地很新，打起来很舒服，价格60一小时还是有点贵。本校学生半价，外来人士可以找个学生一起打，这方法不错的。</view>
     </view>
   </view>
 </view>
-

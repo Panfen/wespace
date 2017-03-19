@@ -1,18 +1,18 @@
 <!--pages/myCollects/myCollects.wxml-->
 
 <view class="container">
-  <view class="collect">
-    <view class="img"> <image src="../../images/pages/pic7.jpg" mode="scaleToFill"></image> </view>
+  <view class="collect {{collect.show==true?'':'hidden'}}" wx:for="{{collects}}" wx:for-item="collect" wx:key="unique">
+    <view class="img"> <image src="{{collect.img}}" mode="scaleToFill"></image> </view>
     <view class="content">
-      <view class="item"><text class="title">科院14号羽毛球场</text></view>
+      <view class="item"><text class="title">{{collect.title}}</text></view>
       <view class="item loc">
-        <text class="location">杭州市西湖区留和路318号</text>
-        <text class="distance">1.5km</text>
+        <text class="location">{{collect.location}}</text>
+        <text class="distance">{{collect.distance}}</text>
       </view>
-      <view class="item"><text class="cost">¥60/小时</text></view>
+      <view class="item"><text class="cost">{{collect.cost}}</text></view>
       <view class="item">
-        <text class="look">查看类似</text>
-        <text class="remark">移除收藏</text>
+        <text class="look" bindtap="viewSimilar">查看类似</text>
+        <text class="remark" bindtap="removeCollect" data-index="{{index}}">移除收藏</text>
       </view>
     </view>
   </view>

@@ -7,6 +7,9 @@
     border-bottom: 0.1rpx solid #ddd;
     margin-bottom:10rpx;
 }
+.collect.hidden{
+    display: none;
+}
 .collect .img{
     top:20rpx;
     left:20rpx;

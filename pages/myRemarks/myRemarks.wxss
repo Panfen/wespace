@@ -1,6 +1,9 @@
 /* pages/myRemark-infos/myRemark-infos.wxss */
-.container{
+.container-item{
     position: relative;
+}
+.container-item.hidden{
+    display: none;
 }
 .container .menu{
     top:20rpx;
