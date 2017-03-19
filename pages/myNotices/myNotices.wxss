@@ -5,6 +5,9 @@
     height:186rpx;
     border-bottom: 0.1rpx solid #ddd;
 }
+.news.hidden{
+    display: none;
+}
 .news-box{
     width: 100%;
     background: #fff;

@@ -11,12 +11,14 @@ Page({
       time:'今天 20:10',
       body:'尊敬的客户，您在恒生科技园13号楼418室的租用将在5天后到期，请及时续期。',
       scrollStyle:'',
+      show:true
     },{
       type:'system',
       title:'卡券到期提醒',
       time:'03.11 18:47',
       body:'尊敬的客户，您有一张价值50元卡券即将到期，点击使用。',
       scrollStyle:'',
+      show:true
     }]
   },
   onLoad:function(options){
@@ -57,9 +59,7 @@ Page({
   delMessage:function(e){
     var id = e.currentTarget.dataset.id;
     var news = this.data.news;
-
-    delete news[id];
-    console.log(news)
+    news[id].show = false;
     this.setData({
       news:news
     });
