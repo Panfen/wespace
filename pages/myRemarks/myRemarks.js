@@ -16,6 +16,11 @@ Page({
         show:true,
       }
     ],
+    showRemarkBox:false,
+    _words:{
+      index:0,
+      content:''
+    }
   },
   onLoad:function(options){
     //
@@ -29,7 +34,6 @@ Page({
 
     this.animation = animation;
 
-
     this.data.menuOpen != true ? animation.rotate(180).step() : animation.rotate(0).step();
 
     this.setData({
@@ -39,7 +43,28 @@ Page({
   },
 
   appendRemark:function(){
-    console.log('追加')
+    this.setData({
+      showRemarkBox:true
+    });
+  },
+  textareaInput:function(e){
+    var words = this.data._words;
+    words.index = e.target.dataset.index;
+    words.content = e.detail.value.trim()
+    this.setData({_words:words});
+  },
+  submitRemark:function(){
+    var words = this.data._words;
+    var remarks = this.data.remarks;
+    remarks[words.index].words = words.content;
+    this.setData({
+      btnText:'已评论',
+      showRemarkBox:false,
+      remarks:remarks
+    });
+  },
+  cancelRemark:function(){
+    this.setData({showRemarkBox:false});
   },
 
   deleteRemark:function(e){

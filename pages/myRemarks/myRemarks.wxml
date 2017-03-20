@@ -4,7 +4,7 @@
   <view class="container-item {{remarkItem.show == true ? '' : 'hidden'}}" wx:for="{{remarks}}" wx:for-item="remarkItem" wx:key="unique">
     <view class="menu" bindtap="createAnimation" animation="{{animationData}}"></view>
     <view class="menu-box display-{{menuOpen}}">
-      <text bindtap="appendRemark">追加</text>
+      <text bindtap="appendRemark">修改</text>
       <text bindtap="deleteRemark" data-index="{{index}}">删除</text>
     </view>
     <view class="remark">
@@ -27,5 +27,14 @@
         <view class="words">{{remarkItem.words}}</view>
       </view>
     </view>
+    <!--S 评论框-->
+    <view class="_remark {{showRemarkBox == true ? '' : 'hidden'}}">
+      <textarea placeholder="Say something, I'm giving up on you." bindinput="textareaInput" value="{{remarkItem.words}}" data-index="{{index}}"/>
+      <view class="control">
+        <text class="btn submit" bindtap="submitRemark">提交</text>
+        <text class="btn cancel" bindtap="cancelRemark">取消</text>
+      </view>
+    </view>
+    <!--E 评论框-->
   </view>
 </view>

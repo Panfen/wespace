@@ -12,6 +12,7 @@
       </view>
     </view>
   </view>
+  <!--S 评论框-->
   <view class="_remark {{showRemarkBox == true ? '' : 'hidden'}}">
     <textarea placeholder="Say something, I'm giving up on you." bindinput="textareaInput"/>
     <view class="control">
@@ -19,4 +20,5 @@
       <text class="btn cancel" bindtap="cancelRemark">取消</text>
     </view>
   </view>
+  <!--E 评论框-->
 </view>
