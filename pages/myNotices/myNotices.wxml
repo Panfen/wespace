@@ -2,7 +2,7 @@
 
 <view class="container">
 
-<view class="news {{new.show == true ? '' : 'hidden'}}" wx:for="{{news}}" wx:for-item="new">
+<view class="news {{new.show == true ? '' : 'hidden'}}" wx:for="{{news}}" wx:for-item="new" wx:key="unique">
     <view class="news-box {{new.type}}" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" 
           style="{{new.scrollStyle}}" data-id="{{index}}">
         <view class="header">

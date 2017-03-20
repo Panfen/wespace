@@ -8,15 +8,15 @@
       <view class="item"><text class="cost">¥120</text></view>
       <view class="item">
         <text class="time">2017-03-12 21:28:43</text>
-        <text class="remark" bindtap="writeRemark">评论</text>
+        <text class="remark" bindtap="writeRemark">{{btnText}}</text>
       </view>
     </view>
   </view>
   <view class="_remark {{showRemarkBox == true ? '' : 'hidden'}}">
-    <textarea placeholder="Say something, I'm giving up on you."/>
+    <textarea placeholder="Say something, I'm giving up on you." bindinput="textareaInput"/>
     <view class="control">
-      <text class="btn submit">提交</text>
-      <text class="btn cancel">取消</text>
+      <text class="btn submit" bindtap="submitRemark">提交</text>
+      <text class="btn cancel" bindtap="cancelRemark">取消</text>
     </view>
   </view>
 </view>

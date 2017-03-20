@@ -47,8 +47,8 @@
     padding: 4rpx 12rpx;
 }
 ._remark{
-    width: 100%;
     background: #fff;
+    padding:20rpx;
     border-top:0.1rpx solid rgba(77, 77, 77, 0.2);
     border-bottom:0.1rpx solid rgba(77, 77, 77, 0.2);
 }
@@ -58,12 +58,12 @@
 ._remark textarea{
     font-family: "微软雅黑";
     font-size: 0.8rem;
-    text-indent: 6rpx;
-    margin: 30rpx 20rpx 10rpx 20rpx;
+    padding:10rpx;
+    margin:10rpx 0;
+    display: inline-block;
     border:0.1rpx solid rgba(77, 77, 77, 0.2);
 }
 ._remark .control{
-    margin:20rpx;
     display: flex;
     justify-content:flex-end;
 }
